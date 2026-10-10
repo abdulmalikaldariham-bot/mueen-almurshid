@@ -120,7 +120,7 @@ export function MueenApp({ service = apiQuestionService }: MueenAppProps) {
                 <h2 id="results-title">الأسئلة المقترحة</h2>
                 {session.source && (
                   <span className="source-pill" data-source={session.source}>
-                    {session.source === 'ai' ? 'مولّدة بالذكاء الاصطناعي' : 'من البنك التجريبي'}
+                    {session.source === 'ai' ? 'مولّدة بالذكاء الاصطناعي' : 'من بنك الأسئلة'}
                   </span>
                 )}
               </div>
