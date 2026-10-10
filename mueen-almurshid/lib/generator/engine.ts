@@ -20,7 +20,7 @@ export type AiClient = (request: {
 /** يُرمى حين لا يكون النموذج متاحًا أصلًا (فيُستخدم البنك التجريبي بلا تنبيه). */
 export class AiUnavailableError extends Error {}
 
-const FALLBACK_NOTICE = 'تعذّر الاتصال بالذكاء الاصطناعي، فعُرضت أسئلة من البنك التجريبي.';
+const FALLBACK_NOTICE = 'تعذّر الاتصال بالذكاء الاصطناعي، فعُرضت أسئلة من بنك الأسئلة.';
 
 /** أقل عدد مقبول من النموذج قبل اعتبار الرد ناقصًا. */
 const MIN_AI_QUESTIONS = 10;

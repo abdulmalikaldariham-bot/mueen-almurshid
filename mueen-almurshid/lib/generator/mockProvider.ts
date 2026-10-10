@@ -128,12 +128,12 @@ export function mockReplace(input: ReplaceInput): string {
     const [text] = pickForPurpose(purpose, 1, analysis, used, none);
     if (text) return text;
   }
-  throw new UserError('لا توجد أسئلة بديلة أخرى لهذا الغرض في البنك التجريبي.');
+  throw new UserError('لا توجد أسئلة بديلة أخرى لهذا الغرض في بنك الأسئلة.');
 }
 
 export function mockFollowUp(input: FollowUpInput): string {
   const used = new Set([...input.existing, input.question].map(dedupeKey));
   const [text] = shuffle(FOLLOW_UP_BANK[input.purpose]).filter((t) => !used.has(dedupeKey(t)));
   if (text) return text;
-  throw new UserError('لا توجد أسئلة متابعة أخرى في البنك التجريبي.');
+  throw new UserError('لا توجد أسئلة متابعة أخرى في بنك الأسئلة.');
 }
